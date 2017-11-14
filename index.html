@@ -1,0 +1,97 @@
+<html>
+	<head>
+        <meta name="author" lang="fr" content="seth37">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<style>
+			@font-face {
+			font-family: 'xian';
+			src: url('QUIQRX+Xiinthlea-Regular.TTF') format('truetype');
+			}
+			body
+			{
+				text-align: center;
+			}
+			textarea
+			{
+				width: 50%;
+				height: 300px;
+				font-size:18px
+			}
+
+			#xian
+			{
+				 font-family: 'xian';
+			}
+		</style>
+    </head>
+	<body>
+	<div >
+		<h2>SRX</h2>
+		<textarea id="srx" spellcheck="false"></textarea>
+	</div>
+	<div>
+		<h2>Xi'an</h2>
+		<textarea id="xian" spellcheck="false"></textarea>
+	</div>
+	<script>
+	$("#srx").on("change paste keyup",function(){
+	var text = $("#srx").val();
+	$("#xian").val("");
+	text = text.replace("aa", "ā");
+	text = text.replace("AA", "Ā");
+	text = text.replace("āa", "â");
+	text = text.replace("oo", "ō");
+	text = text.replace("OO", "Ō");
+	text = text.replace("uu", "ū");
+	text = text.replace("UU", "Ū");
+	text = text.replace("ee", "ē");
+	text = text.replace("EE", "Ē");
+	$("#srx").val(text);
+	var text_xian = text;
+	
+	text_xian = text_xian.replace("A", "@a");
+	text_xian = text_xian.replace("Ā", "@ā");
+	text_xian = text_xian.replace("O", "@o");
+	text_xian = text_xian.replace("Ō", "@ō");
+	text_xian = text_xian.replace("U", "@u");
+	text_xian = text_xian.replace("Ū", "@ū");
+	text_xian = text_xian.replace("E", "@e");
+	text_xian = text_xian.replace("Ē", "@ē");
+	text_xian = text_xian.replace("I", "@i");
+	text_xian = text_xian.replace("Y", "@y");
+	text_xian = text_xian.replace("P", "@p");
+	text_xian = text_xian.replace("K", "@k");
+	text_xian = text_xian.replace("T", "@t");
+	text_xian = text_xian.replace("S", "@s");
+	text_xian = text_xian.replace("H", "@h");
+	text_xian = text_xian.replace("M", "@m");
+	text_xian = text_xian.replace("N", "@n");
+	text_xian = text_xian.replace("L", "@l");
+	text_xian = text_xian.replace("R", "@r");
+	text_xian = text_xian.replace("X", "@x");
+	text_xian = text_xian.replace("C", "@c");
+		
+	
+	text_xian = text_xian.replace("uao", "ẅ");
+	text_xian = text_xian.replace("uāo", "Ẅ");
+	text_xian = text_xian.replace("uoa", "ø");
+	text_xian = text_xian.replace("uōa", "Ø");
+	text_xian = text_xian.replace("uai", "ÿ");
+	text_xian = text_xian.replace("uāi ", "Ÿ");
+	text_xian = text_xian.replace("Uea", "ùĕ");
+	text_xian = text_xian.replace("uth", "&");
+	text_xian = text_xian.replace("e'e", "ė’ ");
+	text_xian = text_xian.replace("yao", "z");
+	text_xian = text_xian.replace("yāo", "Z");
+	text_xian = text_xian.replace("yoa", "c");
+	text_xian = text_xian.replace("yōa", "C");
+	text_xian = text_xian.replace("yai", "ỹ");
+	text_xian = text_xian.replace("yāi", "Ỹ");
+	text_xian = text_xian.replace("thl", "ð");
+	
+	
+	$("#xian").val(text_xian);
+	});
+	</script>
+	</body>
+<html>
