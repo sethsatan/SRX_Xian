@@ -129,8 +129,11 @@
 	text_xian = text_xian.replace("ū", "U");
 	text_xian = text_xian.replace("ē", "E");
 	text_xian = text_xian.replace("y", "j");
-	text_xian = text_xian.replace("/n", " /n ");
+
+	text_xian = text_xian.replace("\r", " \r ");
 	
+	
+	var res = text_xian.charAt(str.length-1);
 	
 	
 	
