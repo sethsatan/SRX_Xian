@@ -49,7 +49,15 @@
 	text = text.replace(/ee/g, "ē");
 	text = text.replace(/EE/g, "Ē");
 	$("#srx").val(text);
-	var text_xian = text;
+	var xian_0 = text;
+	xian_0 = xian_0.replace(/\n/g, " \n ");
+	var text_array = xian_0.split(" ");
+	var xian = "";
+	
+	
+	text_array.forEach(function(text_xian) {
+	
+	
 	
 	text_xian = text_xian.replace(/A/g, "@a");
 	text_xian = text_xian.replace(/Ā/g, "@ā");
@@ -135,9 +143,13 @@
 	text_xian = text_xian.replace(/y/g, "j");
 		text_xian = text_xian.replace(/f/g, "y");
 	
-	text_xian = text_xian.replace(/\n/g, " \n ");
+	
+	
+	
+	xian = xian + text_xian;
+	});
 
-	$("#xian").val(text_xian);
+	$("#xian").val(xian);
 	});
 	
 	
