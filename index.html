@@ -48,6 +48,9 @@
 	text = text.replace(/UU/g, "Ū");
 	text = text.replace(/ee/g, "ē");
 	text = text.replace(/EE/g, "Ē");
+	text = text.replace(/EE/g, "Ē");
+	text = text.replace(/\'/g, "’");
+	text = text.replace(/\"/g, "”");
 	$("#srx").val(text);
 	var xian_0 = text;
 	xian_0 = xian_0.replace(/\n/g, " \n ");
@@ -55,9 +58,12 @@
 	var xian = "";
 	
 	
-	text_array.forEach(function(text_xian) {
 	
+	text_array.forEach(function(word_xian) {
 	
+	clear_xian = word_xian.replace(/[.’”]/gi, '')
+		
+	text_xian = clear_xian
 	
 	text_xian = text_xian.replace(/A/g, "@a");
 	text_xian = text_xian.replace(/Ā/g, "@ā");
@@ -81,7 +87,7 @@
 	text_xian = text_xian.replace(/X/g, "@x");
 	text_xian = text_xian.replace(/C/g, "@c");
 	
-	text_xian = text_xian.replace(/â/g, "#");
+	text_xian = text_xian.replace(/â/g, "%");
 		
 	text_xian = text_xian.replace(/uii/g, "Ï");
 	text_xian = text_xian.replace(/uao/g, "ẅ");
@@ -92,7 +98,7 @@
 	text_xian = text_xian.replace(/uāi /g, "Ÿ");
 	text_xian = text_xian.replace(/uea/g, "ùĕ");
 	text_xian = text_xian.replace(/uth/g, "&");
-	text_xian = text_xian.replace(/e'e/g, "ė’ ");
+	text_xian = text_xian.replace(/e’e/g, "ė’ ");
 	text_xian = text_xian.replace(/yii/g, "Ĩ");
 	text_xian = text_xian.replace(/yao/g, "z");
 	text_xian = text_xian.replace(/yāo/g, "Z");
@@ -143,10 +149,29 @@
 	text_xian = text_xian.replace(/y/g, "j");
 		text_xian = text_xian.replace(/f/g, "y");
 	
+	var l = text_xian.length;
+	var cvn = text_xian;
 	
+	cvn = cvn.replace(/ùĕ/g, "??");
+	cvn = cvn.replace(/jĕ/g, "??");
 	
+	cvn = cvn.replace(/[ÏẅẄøØÿuYĨzZcCỹỸIwWőŐyYěäÄöÖvUëËïãÃõÕũŨẽẼĩAOUEaouei]/g, "v");
+	cvn = cvn.replace(/[ŗļçXþgðpktshmnj]/g, "c");
+	cvn = cvn.replace(/[?&ė]/g, "n");
+	
+	alert(cvn);
+	
+	if (l!=2){
+	for ( i = l; i>0 ; i--) {
+		
+	
+		
+	
+	}
+	}
 	
 	xian = xian + text_xian;
+
 	});
 
 	$("#xian").val(xian);
