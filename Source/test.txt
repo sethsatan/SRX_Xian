@@ -22,3 +22,8 @@ se nyo.uē”, u’u nui tyauo’a se s.o’e nyahyan e o yao. .ē sū ngimyā y
  nya’p.ūh’uesao
  ngito’ath
  huang’moa
+ 
+
+ tang’ue
+ false:		tàGë
+ true: 		tàGê
