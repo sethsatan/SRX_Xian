@@ -63,602 +63,465 @@
 	xian_0 = xian_0.replace(/\n/g, " \n ");
 	var text_array = xian_0.split(" ");
 	var xian = "";
+	var texte_type = "";
+
+	text_array.forEach(function(word_xian) {	
 	
+	word_xian = word_xian.replace(/A/g, "@a");
+	word_xian = word_xian.replace(/Ā/g, "@ā");
+	word_xian = word_xian.replace(/O/g, "@o");
+	word_xian = word_xian.replace(/Ō/g, "@ō");
+	word_xian = word_xian.replace(/U/g, "@u");
+	word_xian = word_xian.replace(/Ū/g, "@ū");
+	word_xian = word_xian.replace(/E/g, "@e");
+	word_xian = word_xian.replace(/Ē/g, "@ē");
+	word_xian = word_xian.replace(/I/g, "@i");
+	word_xian = word_xian.replace(/Y/g, "@y");
+	word_xian = word_xian.replace(/P/g, "@p");
+	word_xian = word_xian.replace(/K/g, "@k");
+	word_xian = word_xian.replace(/T/g, "@t");
+	word_xian = word_xian.replace(/S/g, "@s");
+	word_xian = word_xian.replace(/H/g, "@h");
+	word_xian = word_xian.replace(/M/g, "@m");
+	word_xian = word_xian.replace(/N/g, "@n");
+	word_xian = word_xian.replace(/L/g, "@l");
+	word_xian = word_xian.replace(/R/g, "@r");
+	word_xian = word_xian.replace(/X/g, "@x");
+	word_xian = word_xian.replace(/C/g, "@c");
 	
+	clear_xian = word_xian.replace(/[.’”]/gi, '');
 	
-	text_array.forEach(function(word_xian) {
+	word_xian = e1(word_xian);
+	clear_xian = e1(clear_xian);
 	
-	clear_xian = word_xian.replace(/[.’”]/gi, '')
-		
-	text_xian = clear_xian
+	word_xian_low = word_xian.replace(/[@]/gi, '');
+	l = clear_xian.length;
 	
-	text_xian = text_xian.replace(/A/g, "@a");
-	text_xian = text_xian.replace(/Ā/g, "@ā");
-	text_xian = text_xian.replace(/O/g, "@o");
-	text_xian = text_xian.replace(/Ō/g, "@ō");
-	text_xian = text_xian.replace(/U/g, "@u");
-	text_xian = text_xian.replace(/Ū/g, "@ū");
-	text_xian = text_xian.replace(/E/g, "@e");
-	text_xian = text_xian.replace(/Ē/g, "@ē");
-	text_xian = text_xian.replace(/I/g, "@i");
-	text_xian = text_xian.replace(/Y/g, "@y");
-	text_xian = text_xian.replace(/P/g, "@p");
-	text_xian = text_xian.replace(/K/g, "@k");
-	text_xian = text_xian.replace(/T/g, "@t");
-	text_xian = text_xian.replace(/S/g, "@s");
-	text_xian = text_xian.replace(/H/g, "@h");
-	text_xian = text_xian.replace(/M/g, "@m");
-	text_xian = text_xian.replace(/N/g, "@n");
-	text_xian = text_xian.replace(/L/g, "@l");
-	text_xian = text_xian.replace(/R/g, "@r");
-	text_xian = text_xian.replace(/X/g, "@x");
-	text_xian = text_xian.replace(/C/g, "@c");
-	
-	text_xian = text_xian.replace(/â/g, "%");
-		
-	text_xian = text_xian.replace(/uii/g, "Ï");
-	text_xian = text_xian.replace(/uao/g, "ẅ");
-	text_xian = text_xian.replace(/uāo/g, "Ẅ");
-	text_xian = text_xian.replace(/uoa/g, "ø");
-	text_xian = text_xian.replace(/uōa/g, "Ø");
-	text_xian = text_xian.replace(/uai/g, "ÿ");
-	text_xian = text_xian.replace(/uāi /g, "Ÿ");
-	text_xian = text_xian.replace(/uea/g, "ùĕ");
-	text_xian = text_xian.replace(/uth/g, "&");
-	text_xian = text_xian.replace(/e’e/g, "ė’ ");
-	text_xian = text_xian.replace(/yii/g, "Ĩ");
-	text_xian = text_xian.replace(/yao/g, "z");
-	text_xian = text_xian.replace(/yāo/g, "Z");
-		text_xian = text_xian.replace(/yoa/g, "b");
-	text_xian = text_xian.replace(/yōa/g, "C");
-	text_xian = text_xian.replace(/yai/g, "ỹ");
-	text_xian = text_xian.replace(/yāi/g, "Ỹ");
-	text_xian = text_xian.replace(/yea/g, "jĕ");
-	text_xian = text_xian.replace(/thl/g, "ð");
-	
-	text_xian = text_xian.replace(/xy/g, "X");
-	text_xian = text_xian.replace(/ii/g, "I");	
-	text_xian = text_xian.replace(/ao/g, "w");
-	text_xian = text_xian.replace(/āo/g, "W");
-	text_xian = text_xian.replace(/oa/g, "ő");
-	text_xian = text_xian.replace(/ōa/g, "Ő");
-		text_xian = text_xian.replace(/ai/g, "f");
-	text_xian = text_xian.replace(/āi/g, "Y");
-	text_xian = text_xian.replace(/ae/g, "ě");
-	text_xian = text_xian.replace(/ua/g, "ä");
-	text_xian = text_xian.replace(/uā/g, "Ä");
-	text_xian = text_xian.replace(/uo/g, "ö");
-	text_xian = text_xian.replace(/uō/g, "Ö");
-	text_xian = text_xian.replace(/vu/g, "v");
-	text_xian = text_xian.replace(/ue/g, "ë");
-	text_xian = text_xian.replace(/uē/g, "Ë");
-	text_xian = text_xian.replace(/ui/g, "ï");
-	text_xian = text_xian.replace(/ya/g, "ã");
-	text_xian = text_xian.replace(/yā/g, "Ã");
-	text_xian = text_xian.replace(/yo/g, "õ");
-	text_xian = text_xian.replace(/yō/g, "Õ");
-	text_xian = text_xian.replace(/yu/g, "ũ");
-	text_xian = text_xian.replace(/yū/g, "Ũ")
-	text_xian = text_xian.replace(/ye/g, "ẽ");
-	text_xian = text_xian.replace(/yē/g, "Ẽ");
-	text_xian = text_xian.replace(/yi/g, "ĩ");
-	text_xian = text_xian.replace(/ng/g, "g");
-	text_xian = text_xian.replace(/th/g, "þ");
-	text_xian = text_xian.replace(/ch/g, "ç");
-		text_xian = text_xian.replace(/b/g, "c");
-	text_xian = text_xian.replace(/kl/g, "ļ");
-	text_xian = text_xian.replace(/kr/g, "ŗ");
-	
-	text_xian = text_xian.replace(/ā/g, "A");
-	text_xian = text_xian.replace(/ō/g, "O");
-	text_xian = text_xian.replace(/ū/g, "U");
-	text_xian = text_xian.replace(/ē/g, "E");
-	text_xian = text_xian.replace(/y/g, "j");
-		text_xian = text_xian.replace(/f/g, "y");
-	
-	var l = text_xian.length;
-	
-	if( l == 1 || ( l == 2 && text_xian[0] == "@") ){
-	
-				if ( text_xian[l-1] == "a" ){
-					text_xian = text_xian.replaceAt(l-1,"á");
-				}
-				else if ( text_xian[l-1] == "A" ){
-					text_xian = text_xian.replaceAt(l-1,"Á");
-				}
-				else if ( text_xian[l-1] == "o" ){
-					text_xian = text_xian.replaceAt(l-1,"ó");
-				}
-				else if ( text_xian[l-1] == "O" ){
-					text_xian = text_xian.replaceAt(l-1,"Ó");
-				}
-				else if ( text_xian[l-1] == "u" ){
-					text_xian = text_xian.replaceAt(l-1,"ú");
-				}
-				else if ( text_xian[l-1] == "U" ){
-					text_xian = text_xian.replaceAt(l-1,"Ú");
-				}
-				else if ( text_xian[l-1] == "e" ){
-					text_xian = text_xian.replaceAt(l-1,"é");
-				}
-				else if ( text_xian[l-1] == "E" ){
-					text_xian = text_xian.replaceAt(l-1,"É");
-				}
-				else if ( text_xian[l-1] == "i" ){
-					text_xian = text_xian.replaceAt(l-1,"í");
-				}
-				else if ( text_xian[l-1] == "I" ){
-					text_xian = text_xian.replaceAt(l-1,"Í");
-				}
-				else if ( text_xian[l-1] == "w" ){
-					text_xian = text_xian.replaceAt(l-1,"ẃ");
-				}
-				else if ( text_xian[l-1] == "W" ){
-					text_xian = text_xian.replaceAt(l-1,"Ẃ");
-				}
-				else if ( text_xian[l-1] == "ő" ){
-					text_xian = text_xian.replaceAt(l-1,"ȯ");
-				}
-				else if ( text_xian[l-1] == "Ő" ){
-					text_xian = text_xian.replaceAt(l-1,"Ȯ");
-				}
-				else if ( text_xian[l-1] == "y" ){
-					text_xian = text_xian.replaceAt(l-1,"ý");
-				}
-				else if ( text_xian[l-1] == "Y" ){
-					text_xian = text_xian.replaceAt(l-1,"Ý");
-				}
-				else if ( text_xian[l-1] == "ě" ){
-					text_xian = text_xian.replaceAt(l-1,"Ě");
-				}
-				else if ( text_xian[l-1] == "ä" ){
-					text_xian = text_xian.replaceAt(l-1,"â");
-				}
-				else if ( text_xian[l-1] == "Ä" ){
-					text_xian = text_xian.replaceAt(l-1,"Ä");
-				}
-				else if ( text_xian[l-1] == "ö" ){
-					text_xian = text_xian.replaceAt(l-1,"ô");
-				}
-				else if ( text_xian[l-1] == "Ö" ){
-					text_xian = text_xian.replaceAt(l-1,"Ô");
-				}
-				else if ( text_xian[l-1] == "v" ){
-					text_xian = text_xian.replaceAt(l-1,"V");
-				}
-				else if ( text_xian[l-1] == "ë" ){
-					text_xian = text_xian.replaceAt(l-1,"ê");
-				}
-				else if ( text_xian[l-1] == "Ë" ){
-					text_xian = text_xian.replaceAt(l-1,"Ê");
-				}
-				else if ( text_xian[l-1] == "ï" ){
-					text_xian = text_xian.replaceAt(l-1,"î");
-				}
-				else if ( text_xian[l-1] == "Ï" ){
-					text_xian = text_xian.replaceAt(l-1,"Î");
-				}
-				else if ( text_xian[l-1] == "ẅ" ){
-					text_xian = text_xian.replaceAt(l-1,"ŵ");
-				}
-				else if ( text_xian[l-1] == "Ẅ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ŵ");
-				}
-				else if ( text_xian[l-1] == "ø" ){
-					text_xian = text_xian.replaceAt(l-1,"œ");
-				}
-				else if ( text_xian[l-1] == "Ø" ){
-					text_xian = text_xian.replaceAt(l-1,"Œ");
-				}
-				else if ( text_xian[l-1] == "ÿ" ){
-					text_xian = text_xian.replaceAt(l-1,"ŷ");
-				}
-				else if ( text_xian[l-1] == "Ÿ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ŷ");
-				}
-				else if ( text_xian[l-1] == "ã" ){
-					text_xian = text_xian.replaceAt(l-1,"ā");
-				}
-				else if ( text_xian[l-1] == "Ã" ){
-					text_xian = text_xian.replaceAt(l-1,"Ā");
-				}
-				else if ( text_xian[l-1] == "õ" ){
-					text_xian = text_xian.replaceAt(l-1,"ō");
-				}
-				else if ( text_xian[l-1] == "Õ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ō");
-				}
-				else if ( text_xian[l-1] == "ũ" ){
-					text_xian = text_xian.replaceAt(l-1,"ū");
-				}
-				else if ( text_xian[l-1] == "Ũ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ū");
-				}
-				else if ( text_xian[l-1] == "ẽ" ){
-					text_xian = text_xian.replaceAt(l-1,"ē");
-				}
-				else if ( text_xian[l-1] == "Ẽ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ē");
-				}
-				else if ( text_xian[l-1] == "ĩ" ){
-					text_xian = text_xian.replaceAt(l-1,"ī");
-				}
-				else if ( text_xian[l-1] == "Ĩ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ī");
-				}
-				else if ( text_xian[l-1] == "z" ){
-					text_xian = text_xian.replaceAt(l-1,"ź");
-				}
-				else if ( text_xian[l-1] == "Z" ){
-					text_xian = text_xian.replaceAt(l-1,"Ź");
-				}
-				else if ( text_xian[l-1] == "c" ){
-					text_xian = text_xian.replaceAt(l-1,"b");
-				}
-				else if ( text_xian[l-1] == "C" ){
-					text_xian = text_xian.replaceAt(l-1,"B");
-				}
-				else if ( text_xian[l-1] == "ỹ" ){
-					text_xian = text_xian.replaceAt(l-1,"ȳ");
-				}
-				else if ( text_xian[l-1] == "Ỹ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ȳ");
-				}
-				else{}
-	
+	if( l == 1 || ( l == 2 && clear_xian[0] == "@") ){
+		clear_xian = e2(clear_xian,l);
 	}
 	else{
-	
-	var cvn = text_xian;
-	
-	cvn = cvn.replace(/ùĕ/g, "??");
-	cvn = cvn.replace(/jĕ/g, "??");
-	
-	cvn = cvn.replace(/[ÏẅẄøØÿuYĨzZcCỹỸIwWőŐyYěäÄöÖvUëËïãÃõÕũŨẽẼĩAOUEaouei]/g, "v");
-	cvn = cvn.replace(/[ŗļçXþgðpktshmnj]/g, "c");
-	cvn = cvn.replace(/[?&ė@]/g, "n");
-	
-	
-	
-	for ( i = l-1; i>0 ; i--) {
+		var cvn = clear_xian;
 		
-		if(cvn[i] == "c"){
-			if(/^([kmngþlr])$/.test(text_xian[i]) && i>1 && cvn[i-1]=="v" && cvn[i-2]!="v"){
-				if ( text_xian[i] == "k" ){
-					text_xian = text_xian.replaceAt(i,"K");
+		cvn = cvn.replace(/ùĕ/g, "??");
+		cvn = cvn.replace(/jĕ/g, "??");
+		
+		cvn = cvn.replace(/[ÏẅẄøØÿuYĨzZcCỹỸIwWőŐyYěäÄöÖvUëËïãÃõÕũŨẽẼĩAOUEaouei]/g, "v");
+		cvn = cvn.replace(/[ŗļçXþgðpktshmnj]/g, "c");
+		cvn = cvn.replace(/[?&ė@]/g, "n");
+		
+		for ( i = l-1; i>0 ; i--) {	
+			if(cvn[i] == "c"){
+				if(/^([kmngþlr])$/.test(clear_xian[i]) && i>1 && cvn[i-1]=="v" && cvn[i-2]!="v"){
+					clear_xian = e3(clear_xian,i);
 				}
-				else if ( [i] == "m" ){
-					text_xian = text_xian.replaceAt(i,"M");
-				}
-				else if ( text_xian[i] == "n" ){
-					text_xian = text_xian.replaceAt(i,"N");
-				}
-				else if ( text_xian[i] == "g" ){
-					text_xian = text_xian.replaceAt(i,"G");
-				}
-				else if ( text_xian[i] == "þ" ){
-					text_xian = text_xian.replaceAt(i,"Þ");
-				}
-				else if ( text_xian[i] == "l" || text_xian[i] == "r"){
-					text_xian = text_xian.replaceAt(i,"R");
-				}
-				else {}
-				
-				if ( text_xian[i-1] == "a" ){
-					text_xian = text_xian.replaceAt(i-1,"à");
-				}
-				else if ( text_xian[i-1] == "A" ){
-					text_xian = text_xian.replaceAt(i-1,"À");
-				}
-				else if ( text_xian[i-1] == "o" ){
-					text_xian = text_xian.replaceAt(i-1,"ò");
-				}
-				else if ( text_xian[i-1] == "O" ){
-					text_xian = text_xian.replaceAt(i-1,"Ò");
-				}
-				else if ( text_xian[i-1] == "u" ){
-					text_xian = text_xian.replaceAt(i-1,"ù");
-				}
-				else if ( text_xian[i-1] == "U" ){
-					text_xian = text_xian.replaceAt(i-1,"Ù");
-				}
-				else if ( text_xian[i-1] == "e" ){
-					text_xian = text_xian.replaceAt(i-1,"è");
-				}
-				else if ( text_xian[i-1] == "E" ){
-					text_xian = text_xian.replaceAt(i-1,"È");
-				}
-				else if ( text_xian[i-1] == "i" ){
-					text_xian = text_xian.replaceAt(i-1,"ì");
-				}
-				else if ( text_xian[i-1] == "I" ){
-					text_xian = text_xian.replaceAt(i-1,"Ì");
-				}
-				else if ( text_xian[i-1] == "w" ){
-					text_xian = text_xian.replaceAt(i-1,"ẁ");
-				}
-				else if ( text_xian[i-1] == "W" ){
-					text_xian = text_xian.replaceAt(i-1,"Ẁ");
-				}
-				else if ( text_xian[i-1] == "ő" ){
-					text_xian = text_xian.replaceAt(i-1,"ŏ");
-				}
-				else if ( text_xian[i-1] == "Ő" ){
-					text_xian = text_xian.replaceAt(i-1,"Ŏ");
-				}
-				else if ( text_xian[i-1] == "y" ){
-					text_xian = text_xian.replaceAt(i-1,"ỳ");
-				}
-				else if ( text_xian[i-1] == "Y" ){
-					text_xian = text_xian.replaceAt(i-1,"Ỳ");
-				}
-				else if ( text_xian[i-1] == "ě" ){
-					text_xian = text_xian.replaceAt(i-1,"Ĕ");
-				}
-				else if ( text_xian[i-1] == "ä" ){
-					text_xian = text_xian.replaceAt(i-1,"ạ");
-				}
-				else if ( text_xian[i-1] == "Ä" ){
-					text_xian = text_xian.replaceAt(i-1,"Ạ");
-				}
-				else if ( text_xian[i-1] == "ö" ){
-					text_xian = text_xian.replaceAt(i-1,"ọ");
-				}
-				else if ( text_xian[i-1] == "Ö" ){
-					text_xian = text_xian.replaceAt(i-1,"Ọ");
-				}
-				else if ( text_xian[i-1] == "ë" ){
-					text_xian = text_xian.replaceAt(i-1,"ẹ");
-				}
-				else if ( text_xian[i-1] == "Ë" ){
-					text_xian = text_xian.replaceAt(i-1,"Ẹ");
-				}
-				else if ( text_xian[i-1] == "ï" ){
-					text_xian = text_xian.replaceAt(i-1,"ị");
-				}
-				else if ( text_xian[i-1] == "Ï" ){
-					text_xian = text_xian.replaceAt(i-1,"Ị");
-				}
-				else if ( text_xian[i-1] == "ẅ" ){
-					text_xian = text_xian.replaceAt(i-1,"ẉ");
-				}
-				else if ( text_xian[i-1] == "Ẅ" ){
-					text_xian = text_xian.replaceAt(i-1,"Ẉ");
-				}
-				else if ( text_xian[i-1] == "ø" ){
-					text_xian = text_xian.replaceAt(i-1,"æ");
-				}
-				else if ( text_xian[i-1] == "Ø" ){
-					text_xian = text_xian.replaceAt(i-1,"Æ");
-				}
-				else if ( text_xian[i-1] == "ÿ" ){
-					text_xian = text_xian.replaceAt(i-1,"ỵ");
-				}
-				else if ( text_xian[i-1] == "Ÿ" ){
-					text_xian = text_xian.replaceAt(i-1,"Ỵ");
-				}
-				else if ( text_xian[i-1] == "ã" ){
-					text_xian = text_xian.replaceAt(i-1,"ả");
-				}
-				else if ( text_xian[i-1] == "Ã" ){
-					text_xian = text_xian.replaceAt(i-1,"À");
-				}
-				else if ( text_xian[i-1] == "õ" ){
-					text_xian = text_xian.replaceAt(i-1,"ỏ");
-				}
-				else if ( text_xian[i-1] == "Õ" ){
-					text_xian = text_xian.replaceAt(i-1,"Ỏ");
-				}
-				else if ( text_xian[i-1] == "ũ" ){
-					text_xian = text_xian.replaceAt(i-1,"ủ");
-				}
-				else if ( text_xian[i-1] == "Ũ" ){
-					text_xian = text_xian.replaceAt(i-1,"Ủ");
-				}
-				else if ( text_xian[i-1] == "ẽ" ){
-					text_xian = text_xian.replaceAt(i-1,"ẻ");
-				}
-				else if ( text_xian[i-1] == "Ẽ" ){
-					text_xian = text_xian.replaceAt(i-1,"Ẻ");
-				}
-				else if ( text_xian[i-1] == "ĩ" ){
-					text_xian = text_xian.replaceAt(i-1,"ỉ");
-				}
-				else if ( text_xian[i-1] == "Ĩ" ){
-					text_xian = text_xian.replaceAt(i-1,"Ỉ");
-				}
-				else if ( text_xian[i-1] == "z" ){
-					text_xian = text_xian.replaceAt(i-1,"ż");
-				}
-				else if ( text_xian[i-1] == "Z" ){
-					text_xian = text_xian.replaceAt(i-1,"Ż");
-				}
-				else if ( text_xian[i-1] == "c" ){
-					text_xian = text_xian.replaceAt(i-1,"d");
-				}
-				else if ( text_xian[i-1] == "C" ){
-					text_xian = text_xian.replaceAt(i-1,"D");
-				}
-				else if ( text_xian[i-1] == "ỹ" ){
-					text_xian = text_xian.replaceAt(i-1,"ỷ");
-				}
-				else if ( text_xian[i-1] == "Ỹ" ){
-					text_xian = text_xian.replaceAt(i-1,"Ỷ");
-				}
-				else{}
-				
 			}
 		}
-	
-	}
-	//alert(cvn);
-	if(cvn[l-1]=="v"){
-		if(text_xian.match(/[KMNGÞR]/g)!= null){
-			count = l - text_xian.match(/[@KMNGÞR]/g).length ;
-			if(text_xian.match(/[&ė1234567890]/g)!= null){
-			count= count + text_xian.match(/[&ė1234567890]/g).length
-			}
-			
-			if(count%2==1){
-				if ( text_xian[l-1] == "a" ){
-					text_xian = text_xian.replaceAt(l-1,"á");
+		//alert(cvn);
+		if(cvn[l-1]=="v"){
+			if(clear_xian.match(/[KMNGÞR]/g)!= null){
+				count = l - clear_xian.match(/[@KMNGÞR]/g).length ;
+				if(clear_xian.match(/[&ė1234567890]/g)!= null){
+				count= count + clear_xian.match(/[&ė1234567890]/g).length
 				}
-				else if ( text_xian[l-1] == "A" ){
-					text_xian = text_xian.replaceAt(l-1,"Á");
+				
+				if(count%2==1){
+					clear_xian = e2(clear_xian,l);
 				}
-				else if ( text_xian[l-1] == "o" ){
-					text_xian = text_xian.replaceAt(l-1,"ó");
-				}
-				else if ( text_xian[l-1] == "O" ){
-					text_xian = text_xian.replaceAt(l-1,"Ó");
-				}
-				else if ( text_xian[l-1] == "u" ){
-					text_xian = text_xian.replaceAt(l-1,"ú");
-				}
-				else if ( text_xian[l-1] == "U" ){
-					text_xian = text_xian.replaceAt(l-1,"Ú");
-				}
-				else if ( text_xian[l-1] == "e" ){
-					text_xian = text_xian.replaceAt(l-1,"é");
-				}
-				else if ( text_xian[l-1] == "E" ){
-					text_xian = text_xian.replaceAt(l-1,"É");
-				}
-				else if ( text_xian[l-1] == "i" ){
-					text_xian = text_xian.replaceAt(l-1,"í");
-				}
-				else if ( text_xian[l-1] == "I" ){
-					text_xian = text_xian.replaceAt(l-1,"Í");
-				}
-				else if ( text_xian[l-1] == "w" ){
-					text_xian = text_xian.replaceAt(l-1,"ẃ");
-				}
-				else if ( text_xian[l-1] == "W" ){
-					text_xian = text_xian.replaceAt(l-1,"Ẃ");
-				}
-				else if ( text_xian[l-1] == "ő" ){
-					text_xian = text_xian.replaceAt(l-1,"ȯ");
-				}
-				else if ( text_xian[l-1] == "Ő" ){
-					text_xian = text_xian.replaceAt(l-1,"Ȯ");
-				}
-				else if ( text_xian[l-1] == "y" ){
-					text_xian = text_xian.replaceAt(l-1,"ý");
-				}
-				else if ( text_xian[l-1] == "Y" ){
-					text_xian = text_xian.replaceAt(l-1,"Ý");
-				}
-				else if ( text_xian[l-1] == "ě" ){
-					text_xian = text_xian.replaceAt(l-1,"Ě");
-				}
-				else if ( text_xian[l-1] == "ä" ){
-					text_xian = text_xian.replaceAt(l-1,"â");
-				}
-				else if ( text_xian[l-1] == "Ä" ){
-					text_xian = text_xian.replaceAt(l-1,"Ä");
-				}
-				else if ( text_xian[l-1] == "ö" ){
-					text_xian = text_xian.replaceAt(l-1,"ô");
-				}
-				else if ( text_xian[l-1] == "Ö" ){
-					text_xian = text_xian.replaceAt(l-1,"Ô");
-				}
-				else if ( text_xian[l-1] == "v" ){
-					text_xian = text_xian.replaceAt(l-1,"V");
-				}
-				else if ( text_xian[l-1] == "ë" ){
-					text_xian = text_xian.replaceAt(l-1,"ê");
-				}
-				else if ( text_xian[l-1] == "Ë" ){
-					text_xian = text_xian.replaceAt(l-1,"Ê");
-				}
-				else if ( text_xian[l-1] == "ï" ){
-					text_xian = text_xian.replaceAt(l-1,"î");
-				}
-				else if ( text_xian[l-1] == "Ï" ){
-					text_xian = text_xian.replaceAt(l-1,"Î");
-				}
-				else if ( text_xian[l-1] == "ẅ" ){
-					text_xian = text_xian.replaceAt(l-1,"ŵ");
-				}
-				else if ( text_xian[l-1] == "Ẅ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ŵ");
-				}
-				else if ( text_xian[l-1] == "ø" ){
-					text_xian = text_xian.replaceAt(l-1,"œ");
-				}
-				else if ( text_xian[l-1] == "Ø" ){
-					text_xian = text_xian.replaceAt(l-1,"Œ");
-				}
-				else if ( text_xian[l-1] == "ÿ" ){
-					text_xian = text_xian.replaceAt(l-1,"ŷ");
-				}
-				else if ( text_xian[l-1] == "Ÿ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ŷ");
-				}
-				else if ( text_xian[l-1] == "ã" ){
-					text_xian = text_xian.replaceAt(l-1,"ā");
-				}
-				else if ( text_xian[l-1] == "Ã" ){
-					text_xian = text_xian.replaceAt(l-1,"Ā");
-				}
-				else if ( text_xian[l-1] == "õ" ){
-					text_xian = text_xian.replaceAt(l-1,"ō");
-				}
-				else if ( text_xian[l-1] == "Õ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ō");
-				}
-				else if ( text_xian[l-1] == "ũ" ){
-					text_xian = text_xian.replaceAt(l-1,"ū");
-				}
-				else if ( text_xian[l-1] == "Ũ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ū");
-				}
-				else if ( text_xian[l-1] == "ẽ" ){
-					text_xian = text_xian.replaceAt(l-1,"ē");
-				}
-				else if ( text_xian[l-1] == "Ẽ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ē");
-				}
-				else if ( text_xian[l-1] == "ĩ" ){
-					text_xian = text_xian.replaceAt(l-1,"ī");
-				}
-				else if ( text_xian[l-1] == "Ĩ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ī");
-				}
-				else if ( text_xian[l-1] == "z" ){
-					text_xian = text_xian.replaceAt(l-1,"ź");
-				}
-				else if ( text_xian[l-1] == "Z" ){
-					text_xian = text_xian.replaceAt(l-1,"Ź");
-				}
-				else if ( text_xian[l-1] == "c" ){
-					text_xian = text_xian.replaceAt(l-1,"b");
-				}
-				else if ( text_xian[l-1] == "C" ){
-					text_xian = text_xian.replaceAt(l-1,"B");
-				}
-				else if ( text_xian[l-1] == "ỹ" ){
-					text_xian = text_xian.replaceAt(l-1,"ȳ");
-				}
-				else if ( text_xian[l-1] == "Ỹ" ){
-					text_xian = text_xian.replaceAt(l-1,"Ȳ");
-				}
-				else{}
 			}
 		}
 	}
-	}
-	
+	//if(clear_xian.length!=word_xian.length){
+	//	for ( i = l-1; i>0 ; i--) {			
+	//	}
+	//}
 		
-	xian = xian + text_xian;
+	xian = xian + clear_xian;
 
 	});
 
 	$("#xian").val(xian);
+
 	});
 	
+	function e1 ( text ){
+		text = text.replace(/â/g, "%");	
+	text = text.replace(/uii/g, "Ï");
+	text = text.replace(/uao/g, "ẅ");
+	text = text.replace(/uāo/g, "Ẅ");
+	text = text.replace(/uoa/g, "ø");
+	text = text.replace(/uōa/g, "Ø");
+	text = text.replace(/uai/g, "ÿ");
+	text = text.replace(/uāi /g, "Ÿ");
+	text = text.replace(/uea/g, "ùĕ");
+	text = text.replace(/uth/g, "&");
+	text = text.replace(/e’e/g, "ė’ ");
+	text = text.replace(/yii/g, "Ĩ");
+	text = text.replace(/yao/g, "z");
+	text = text.replace(/yāo/g, "Z");
+		text = text.replace(/yoa/g, "b");
+	text = text.replace(/yōa/g, "C");
+	text = text.replace(/yai/g, "ỹ");
+	text = text.replace(/yāi/g, "Ỹ");
+	text = text.replace(/yea/g, "jĕ");
+	text = text.replace(/thl/g, "ð");
 	
+	text = text.replace(/xy/g, "X");
+	text = text.replace(/ii/g, "I");	
+	text = text.replace(/ao/g, "w");
+	text = text.replace(/āo/g, "W");
+	text = text.replace(/oa/g, "ő");
+	text = text.replace(/ōa/g, "Ő");
+		text = text.replace(/ai/g, "f");
+	text = text.replace(/āi/g, "Y");
+	text = text.replace(/ae/g, "ě");
+	text = text.replace(/ua/g, "ä");
+	text = text.replace(/uā/g, "Ä");
+	text = text.replace(/uo/g, "ö");
+	text = text.replace(/uō/g, "Ö");
+	text = text.replace(/vu/g, "v");
+	text = text.replace(/ue/g, "ë");
+	text = text.replace(/uē/g, "Ë");
+	text = text.replace(/ui/g, "ï");
+	text = text.replace(/ya/g, "ã");
+	text = text.replace(/yā/g, "Ã");
+	text = text.replace(/yo/g, "õ");
+	text = text.replace(/yō/g, "Õ");
+	text = text.replace(/yu/g, "ũ");
+	text = text.replace(/yū/g, "Ũ")
+	text = text.replace(/ye/g, "ẽ");
+	text = text.replace(/yē/g, "Ẽ");
+	text = text.replace(/yi/g, "ĩ");
+	text = text.replace(/ng/g, "g");
+	text = text.replace(/th/g, "þ");
+	text = text.replace(/ch/g, "ç");
+		text = text.replace(/b/g, "c");
+	text = text.replace(/kl/g, "ļ");
+	text = text.replace(/kr/g, "ŗ");
+	
+	text = text.replace(/ā/g, "A");
+	text = text.replace(/ō/g, "O");
+	text = text.replace(/ū/g, "U");
+	text = text.replace(/ē/g, "E");
+	text = text.replace(/y/g, "j");
+		text = text.replace(/f/g, "y");
+	return text;
+	}
+		
+	function e2(text,l){
+				if ( text[l-1] == "a" ){
+					text = text.replaceAt(l-1,"á");
+				}
+				else if ( text[l-1] == "A" ){
+					text = text.replaceAt(l-1,"Á");
+				}
+				else if ( text[l-1] == "o" ){
+					text = text.replaceAt(l-1,"ó");
+				}
+				else if ( text[l-1] == "O" ){
+					text = text.replaceAt(l-1,"Ó");
+				}
+				else if ( text[l-1] == "u" ){
+					text = text.replaceAt(l-1,"ú");
+				}
+				else if ( text[l-1] == "U" ){
+					text = text.replaceAt(l-1,"Ú");
+				}
+				else if ( text[l-1] == "e" ){
+					text = text.replaceAt(l-1,"é");
+				}
+				else if ( text[l-1] == "E" ){
+					text = text.replaceAt(l-1,"É");
+				}
+				else if ( text[l-1] == "i" ){
+					text = text.replaceAt(l-1,"í");
+				}
+				else if ( text[l-1] == "I" ){
+					text = text.replaceAt(l-1,"Í");
+				}
+				else if ( text[l-1] == "w" ){
+					text = text.replaceAt(l-1,"ẃ");
+				}
+				else if ( text[l-1] == "W" ){
+					text = text.replaceAt(l-1,"Ẃ");
+				}
+				else if ( text[l-1] == "ő" ){
+					text = text.replaceAt(l-1,"ȯ");
+				}
+				else if ( text[l-1] == "Ő" ){
+					text = text.replaceAt(l-1,"Ȯ");
+				}
+				else if ( text[l-1] == "y" ){
+					text = text.replaceAt(l-1,"ý");
+				}
+				else if ( text[l-1] == "Y" ){
+					text = text.replaceAt(l-1,"Ý");
+				}
+				else if ( text[l-1] == "ě" ){
+					text = text.replaceAt(l-1,"Ě");
+				}
+				else if ( text[l-1] == "ä" ){
+					text = text.replaceAt(l-1,"â");
+				}
+				else if ( text[l-1] == "Ä" ){
+					text = text.replaceAt(l-1,"Ä");
+				}
+				else if ( text[l-1] == "ö" ){
+					text = text.replaceAt(l-1,"ô");
+				}
+				else if ( text[l-1] == "Ö" ){
+					text = text.replaceAt(l-1,"Ô");
+				}
+				else if ( text[l-1] == "v" ){
+					text = text.replaceAt(l-1,"V");
+				}
+				else if ( text[l-1] == "ë" ){
+					text = text.replaceAt(l-1,"ê");
+				}
+				else if ( text[l-1] == "Ë" ){
+					text = text.replaceAt(l-1,"Ê");
+				}
+				else if ( text[l-1] == "ï" ){
+					text = text.replaceAt(l-1,"î");
+				}
+				else if ( text[l-1] == "Ï" ){
+					text = text.replaceAt(l-1,"Î");
+				}
+				else if ( text[l-1] == "ẅ" ){
+					text = text.replaceAt(l-1,"ŵ");
+				}
+				else if ( text[l-1] == "Ẅ" ){
+					text = text.replaceAt(l-1,"Ŵ");
+				}
+				else if ( text[l-1] == "ø" ){
+					text = text.replaceAt(l-1,"œ");
+				}
+				else if ( text[l-1] == "Ø" ){
+					text = text.replaceAt(l-1,"Œ");
+				}
+				else if ( text[l-1] == "ÿ" ){
+					text = text.replaceAt(l-1,"ŷ");
+				}
+				else if ( text[l-1] == "Ÿ" ){
+					text = text.replaceAt(l-1,"Ŷ");
+				}
+				else if ( text[l-1] == "ã" ){
+					text = text.replaceAt(l-1,"ā");
+				}
+				else if ( text[l-1] == "Ã" ){
+					text = text.replaceAt(l-1,"Ā");
+				}
+				else if ( text[l-1] == "õ" ){
+					text = text.replaceAt(l-1,"ō");
+				}
+				else if ( text[l-1] == "Õ" ){
+					text = text.replaceAt(l-1,"Ō");
+				}
+				else if ( text[l-1] == "ũ" ){
+					text = text.replaceAt(l-1,"ū");
+				}
+				else if ( text[l-1] == "Ũ" ){
+					text = text.replaceAt(l-1,"Ū");
+				}
+				else if ( text[l-1] == "ẽ" ){
+					text = text.replaceAt(l-1,"ē");
+				}
+				else if ( text[l-1] == "Ẽ" ){
+					text = text.replaceAt(l-1,"Ē");
+				}
+				else if ( text[l-1] == "ĩ" ){
+					text = text.replaceAt(l-1,"ī");
+				}
+				else if ( text[l-1] == "Ĩ" ){
+					text = text.replaceAt(l-1,"Ī");
+				}
+				else if ( text[l-1] == "z" ){
+					text = text.replaceAt(l-1,"ź");
+				}
+				else if ( text[l-1] == "Z" ){
+					text = text.replaceAt(l-1,"Ź");
+				}
+				else if ( text[l-1] == "c" ){
+					text = text.replaceAt(l-1,"b");
+				}
+				else if ( text[l-1] == "C" ){
+					text = text.replaceAt(l-1,"B");
+				}
+				else if ( text[l-1] == "ỹ" ){
+					text = text.replaceAt(l-1,"ȳ");
+				}
+				else if ( text[l-1] == "Ỹ" ){
+					text = text.replaceAt(l-1,"Ȳ");
+				}
+				else{}
+	return text;
+	}
+	function e3 (text,i){
+				if ( text[i] == "k" ){
+					text = text.replaceAt(i,"K");
+				}
+				else if ( text[i] == "m" ){
+					text = text.replaceAt(i,"M");
+				}
+				else if ( text[i] == "n" ){
+					text = text.replaceAt(i,"N");
+				}
+				else if ( text[i] == "g" ){
+					text = text.replaceAt(i,"G");
+				}
+				else if ( text[i] == "þ" ){
+					text = text.replaceAt(i,"Þ");
+				}
+				else if ( text[i] == "l" || text[i] == "r"){
+					text = text.replaceAt(i,"R");
+				}
+				else {}
+				
+				if ( text[i-1] == "a" ){
+					text = text.replaceAt(i-1,"à");
+				}
+				else if ( text[i-1] == "A" ){
+					text = text.replaceAt(i-1,"À");
+				}
+				else if ( text[i-1] == "o" ){
+					text = text.replaceAt(i-1,"ò");
+				}
+				else if ( text[i-1] == "O" ){
+					text = text.replaceAt(i-1,"Ò");
+				}
+				else if ( text[i-1] == "u" ){
+					text = text.replaceAt(i-1,"ù");
+				}
+				else if ( text[i-1] == "U" ){
+					text = text.replaceAt(i-1,"Ù");
+				}
+				else if ( text[i-1] == "e" ){
+					text = text.replaceAt(i-1,"è");
+				}
+				else if ( text[i-1] == "E" ){
+					text = text.replaceAt(i-1,"È");
+				}
+				else if ( text[i-1] == "i" ){
+					text = text.replaceAt(i-1,"ì");
+				}
+				else if ( text[i-1] == "I" ){
+					text = text.replaceAt(i-1,"Ì");
+				}
+				else if ( text[i-1] == "w" ){
+					text = text.replaceAt(i-1,"ẁ");
+				}
+				else if ( text[i-1] == "W" ){
+					text = text.replaceAt(i-1,"Ẁ");
+				}
+				else if ( text[i-1] == "ő" ){
+					text = text.replaceAt(i-1,"ŏ");
+				}
+				else if ( text[i-1] == "Ő" ){
+					text = text.replaceAt(i-1,"Ŏ");
+				}
+				else if ( text[i-1] == "y" ){
+					text = text.replaceAt(i-1,"ỳ");
+				}
+				else if ( text[i-1] == "Y" ){
+					text = text.replaceAt(i-1,"Ỳ");
+				}
+				else if ( text[i-1] == "ě" ){
+					text = text.replaceAt(i-1,"Ĕ");
+				}
+				else if ( text[i-1] == "ä" ){
+					text = text.replaceAt(i-1,"ạ");
+				}
+				else if ( text[i-1] == "Ä" ){
+					text = text.replaceAt(i-1,"Ạ");
+				}
+				else if ( text[i-1] == "ö" ){
+					text = text.replaceAt(i-1,"ọ");
+				}
+				else if ( text[i-1] == "Ö" ){
+					text = text.replaceAt(i-1,"Ọ");
+				}
+				else if ( text[i-1] == "ë" ){
+					text = text.replaceAt(i-1,"ẹ");
+				}
+				else if ( text[i-1] == "Ë" ){
+					text = text.replaceAt(i-1,"Ẹ");
+				}
+				else if ( text[i-1] == "ï" ){
+					text = text.replaceAt(i-1,"ị");
+				}
+				else if ( text[i-1] == "Ï" ){
+					text = text.replaceAt(i-1,"Ị");
+				}
+				else if ( text[i-1] == "ẅ" ){
+					text = text.replaceAt(i-1,"ẉ");
+				}
+				else if ( text[i-1] == "Ẅ" ){
+					text = text.replaceAt(i-1,"Ẉ");
+				}
+				else if ( text[i-1] == "ø" ){
+					text = text.replaceAt(i-1,"æ");
+				}
+				else if ( text[i-1] == "Ø" ){
+					text = text.replaceAt(i-1,"Æ");
+				}
+				else if ( text[i-1] == "ÿ" ){
+					text = text.replaceAt(i-1,"ỵ");
+				}
+				else if ( text[i-1] == "Ÿ" ){
+					text = text.replaceAt(i-1,"Ỵ");
+				}
+				else if ( text[i-1] == "ã" ){
+					text = text.replaceAt(i-1,"ả");
+				}
+				else if ( text[i-1] == "Ã" ){
+					text = text.replaceAt(i-1,"À");
+				}
+				else if ( text[i-1] == "õ" ){
+					text = text.replaceAt(i-1,"ỏ");
+				}
+				else if ( text[i-1] == "Õ" ){
+					text = text.replaceAt(i-1,"Ỏ");
+				}
+				else if ( text[i-1] == "ũ" ){
+					text = text.replaceAt(i-1,"ủ");
+				}
+				else if ( text[i-1] == "Ũ" ){
+					text = text.replaceAt(i-1,"Ủ");
+				}
+				else if ( text[i-1] == "ẽ" ){
+					text = text.replaceAt(i-1,"ẻ");
+				}
+				else if ( text[i-1] == "Ẽ" ){
+					text = text.replaceAt(i-1,"Ẻ");
+				}
+				else if ( text[i-1] == "ĩ" ){
+					text = text.replaceAt(i-1,"ỉ");
+				}
+				else if ( text[i-1] == "Ĩ" ){
+					text = text.replaceAt(i-1,"Ỉ");
+				}
+				else if ( text[i-1] == "z" ){
+					text = text.replaceAt(i-1,"ż");
+				}
+				else if ( text[i-1] == "Z" ){
+					text = text.replaceAt(i-1,"Ż");
+				}
+				else if ( text[i-1] == "c" ){
+					text = text.replaceAt(i-1,"d");
+				}
+				else if ( text[i-1] == "C" ){
+					text = text.replaceAt(i-1,"D");
+				}
+				else if ( text[i-1] == "ỹ" ){
+					text = text.replaceAt(i-1,"ỷ");
+				}
+				else if ( text[i-1] == "Ỹ" ){
+					text = text.replaceAt(i-1,"Ỷ");
+				}
+				else{}
+				
+	return text;
+	}
 
 	</script>
 	</body>

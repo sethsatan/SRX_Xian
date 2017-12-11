@@ -1,3 +1,4 @@
+﻿
 xE’ së lèN , sÀÞ# sèN nã’ pU\ $hë› sw
 Ó\ kÿ gA’ lo# ha» nc’ XàG ó kÿ pa tàG’ ê ō ó sA xE’ $so é› e so çw’ pU# $hë› sw e pu# ðĕ’ ú\ ȳ po xu ā $ú› se hë sw ë nï ny ðÙN e
 hë tõ’ ma & ī lèN e Á# hë nã’ mő# se nõ $ag» . ĩo’ Á# ha» ú\ Xi ag ðÈG nï nc’ tã œ’ e mő# mő# , & É\ ko sU ny e po é tìN’ tàG
@@ -23,7 +24,4 @@ se nyo.uē”, u’u nui tyauo’a se s.o’e nyahyan e o yao. .ē sū ngimyā y
  ngito’ath
  huang’moa
  
-
- tang’ue
- false:		tàGë
- true: 		tàGê
+ 
