@@ -209,317 +209,114 @@
 	}
 		
 	function e2(text,l){
-				if ( text[l-1] == "a" ){
-					text = text.replaceAt(l-1,"á");
-				}
-				else if ( text[l-1] == "A" ){
-					text = text.replaceAt(l-1,"Á");
-				}
-				else if ( text[l-1] == "o" ){
-					text = text.replaceAt(l-1,"ó");
-				}
-				else if ( text[l-1] == "O" ){
-					text = text.replaceAt(l-1,"Ó");
-				}
-				else if ( text[l-1] == "u" ){
-					text = text.replaceAt(l-1,"ú");
-				}
-				else if ( text[l-1] == "U" ){
-					text = text.replaceAt(l-1,"Ú");
-				}
-				else if ( text[l-1] == "e" ){
-					text = text.replaceAt(l-1,"é");
-				}
-				else if ( text[l-1] == "E" ){
-					text = text.replaceAt(l-1,"É");
-				}
-				else if ( text[l-1] == "i" ){
-					text = text.replaceAt(l-1,"í");
-				}
-				else if ( text[l-1] == "I" ){
-					text = text.replaceAt(l-1,"Í");
-				}
-				else if ( text[l-1] == "w" ){
-					text = text.replaceAt(l-1,"ẃ");
-				}
-				else if ( text[l-1] == "W" ){
-					text = text.replaceAt(l-1,"Ẃ");
-				}
-				else if ( text[l-1] == "ő" ){
-					text = text.replaceAt(l-1,"ȯ");
-				}
-				else if ( text[l-1] == "Ő" ){
-					text = text.replaceAt(l-1,"Ȯ");
-				}
-				else if ( text[l-1] == "y" ){
-					text = text.replaceAt(l-1,"ý");
-				}
-				else if ( text[l-1] == "Y" ){
-					text = text.replaceAt(l-1,"Ý");
-				}
-				else if ( text[l-1] == "ě" ){
-					text = text.replaceAt(l-1,"Ě");
-				}
-				else if ( text[l-1] == "ä" ){
-					text = text.replaceAt(l-1,"â");
-				}
-				else if ( text[l-1] == "Ä" ){
-					text = text.replaceAt(l-1,"Ä");
-				}
-				else if ( text[l-1] == "ö" ){
-					text = text.replaceAt(l-1,"ô");
-				}
-				else if ( text[l-1] == "Ö" ){
-					text = text.replaceAt(l-1,"Ô");
-				}
-				else if ( text[l-1] == "v" ){
-					text = text.replaceAt(l-1,"V");
-				}
-				else if ( text[l-1] == "ë" ){
-					text = text.replaceAt(l-1,"ê");
-				}
-				else if ( text[l-1] == "Ë" ){
-					text = text.replaceAt(l-1,"Ê");
-				}
-				else if ( text[l-1] == "ï" ){
-					text = text.replaceAt(l-1,"î");
-				}
-				else if ( text[l-1] == "Ï" ){
-					text = text.replaceAt(l-1,"Î");
-				}
-				else if ( text[l-1] == "ẅ" ){
-					text = text.replaceAt(l-1,"ŵ");
-				}
-				else if ( text[l-1] == "Ẅ" ){
-					text = text.replaceAt(l-1,"Ŵ");
-				}
-				else if ( text[l-1] == "ø" ){
-					text = text.replaceAt(l-1,"œ");
-				}
-				else if ( text[l-1] == "Ø" ){
-					text = text.replaceAt(l-1,"Œ");
-				}
-				else if ( text[l-1] == "ÿ" ){
-					text = text.replaceAt(l-1,"ŷ");
-				}
-				else if ( text[l-1] == "Ÿ" ){
-					text = text.replaceAt(l-1,"Ŷ");
-				}
-				else if ( text[l-1] == "ã" ){
-					text = text.replaceAt(l-1,"ā");
-				}
-				else if ( text[l-1] == "Ã" ){
-					text = text.replaceAt(l-1,"Ā");
-				}
-				else if ( text[l-1] == "õ" ){
-					text = text.replaceAt(l-1,"ō");
-				}
-				else if ( text[l-1] == "Õ" ){
-					text = text.replaceAt(l-1,"Ō");
-				}
-				else if ( text[l-1] == "ũ" ){
-					text = text.replaceAt(l-1,"ū");
-				}
-				else if ( text[l-1] == "Ũ" ){
-					text = text.replaceAt(l-1,"Ū");
-				}
-				else if ( text[l-1] == "ẽ" ){
-					text = text.replaceAt(l-1,"ē");
-				}
-				else if ( text[l-1] == "Ẽ" ){
-					text = text.replaceAt(l-1,"Ē");
-				}
-				else if ( text[l-1] == "ĩ" ){
-					text = text.replaceAt(l-1,"ī");
-				}
-				else if ( text[l-1] == "Ĩ" ){
-					text = text.replaceAt(l-1,"Ī");
-				}
-				else if ( text[l-1] == "z" ){
-					text = text.replaceAt(l-1,"ź");
-				}
-				else if ( text[l-1] == "Z" ){
-					text = text.replaceAt(l-1,"Ź");
-				}
-				else if ( text[l-1] == "c" ){
-					text = text.replaceAt(l-1,"b");
-				}
-				else if ( text[l-1] == "C" ){
-					text = text.replaceAt(l-1,"B");
-				}
-				else if ( text[l-1] == "ỹ" ){
-					text = text.replaceAt(l-1,"ȳ");
-				}
-				else if ( text[l-1] == "Ỹ" ){
-					text = text.replaceAt(l-1,"Ȳ");
-				}
-				else{}
+	if ( text[l-1] == "a" ){text = text.replaceAt(l-1,"á");}
+	else if ( text[l-1] == "A" ){text = text.replaceAt(l-1,"Á");}
+	else if ( text[l-1] == "o" ){text = text.replaceAt(l-1,"ó");}
+	else if ( text[l-1] == "O" ){text = text.replaceAt(l-1,"Ó");}
+	else if ( text[l-1] == "u" ){text = text.replaceAt(l-1,"ú");}
+	else if ( text[l-1] == "U" ){text = text.replaceAt(l-1,"Ú");}
+	else if ( text[l-1] == "e" ){text = text.replaceAt(l-1,"é");}
+	else if ( text[l-1] == "E" ){text = text.replaceAt(l-1,"É");}
+	else if ( text[l-1] == "i" ){text = text.replaceAt(l-1,"í");}
+	else if ( text[l-1] == "I" ){text = text.replaceAt(l-1,"Í");}
+	else if ( text[l-1] == "w" ){text = text.replaceAt(l-1,"ẃ");}
+	else if ( text[l-1] == "W" ){text = text.replaceAt(l-1,"Ẃ");}
+	else if ( text[l-1] == "ő" ){text = text.replaceAt(l-1,"ȯ");}
+	else if ( text[l-1] == "Ő" ){text = text.replaceAt(l-1,"Ȯ");}
+	else if ( text[l-1] == "y" ){text = text.replaceAt(l-1,"ý");}
+	else if ( text[l-1] == "Y" ){text = text.replaceAt(l-1,"Ý");}
+	else if ( text[l-1] == "ě" ){text = text.replaceAt(l-1,"Ě");}
+	else if ( text[l-1] == "ä" ){text = text.replaceAt(l-1,"â");}
+	else if ( text[l-1] == "Ä" ){text = text.replaceAt(l-1,"Ä");}
+	else if ( text[l-1] == "ö" ){text = text.replaceAt(l-1,"ô");}
+	else if ( text[l-1] == "Ö" ){text = text.replaceAt(l-1,"Ô");}
+	else if ( text[l-1] == "v" ){text = text.replaceAt(l-1,"V");}
+	else if ( text[l-1] == "ë" ){text = text.replaceAt(l-1,"ê");}
+	else if ( text[l-1] == "Ë" ){text = text.replaceAt(l-1,"Ê");}
+	else if ( text[l-1] == "ï" ){text = text.replaceAt(l-1,"î");}
+	else if ( text[l-1] == "Ï" ){text = text.replaceAt(l-1,"Î");}
+	else if ( text[l-1] == "ẅ" ){text = text.replaceAt(l-1,"ŵ");}
+	else if ( text[l-1] == "Ẅ" ){text = text.replaceAt(l-1,"Ŵ");}
+	else if ( text[l-1] == "ø" ){text = text.replaceAt(l-1,"œ");}
+	else if ( text[l-1] == "Ø" ){text = text.replaceAt(l-1,"Œ");}
+	else if ( text[l-1] == "ÿ" ){text = text.replaceAt(l-1,"ŷ");}
+	else if ( text[l-1] == "Ÿ" ){text = text.replaceAt(l-1,"Ŷ");}
+	else if ( text[l-1] == "ã" ){text = text.replaceAt(l-1,"ā");}
+	else if ( text[l-1] == "Ã" ){text = text.replaceAt(l-1,"Ā");}
+	else if ( text[l-1] == "õ" ){text = text.replaceAt(l-1,"ō");}
+	else if ( text[l-1] == "Õ" ){text = text.replaceAt(l-1,"Ō");}
+	else if ( text[l-1] == "ũ" ){text = text.replaceAt(l-1,"ū");}
+	else if ( text[l-1] == "Ũ" ){text = text.replaceAt(l-1,"Ū");}
+	else if ( text[l-1] == "ẽ" ){text = text.replaceAt(l-1,"ē");}
+	else if ( text[l-1] == "Ẽ" ){text = text.replaceAt(l-1,"Ē");}
+	else if ( text[l-1] == "ĩ" ){text = text.replaceAt(l-1,"ī");}
+	else if ( text[l-1] == "Ĩ" ){text = text.replaceAt(l-1,"Ī");}
+	else if ( text[l-1] == "z" ){text = text.replaceAt(l-1,"ź");}
+	else if ( text[l-1] == "Z" ){text = text.replaceAt(l-1,"Ź");}
+	else if ( text[l-1] == "c" ){text = text.replaceAt(l-1,"b");}
+	else if ( text[l-1] == "C" ){text = text.replaceAt(l-1,"B");}
+	else if ( text[l-1] == "ỹ" ){text = text.replaceAt(l-1,"ȳ");}
+	else if ( text[l-1] == "Ỹ" ){text = text.replaceAt(l-1,"Ȳ");}
+	else{}
 	return text;
 	}
 	function e3 (text,i){
-				if ( text[i] == "k" ){
-					text = text.replaceAt(i,"K");
-				}
-				else if ( text[i] == "m" ){
-					text = text.replaceAt(i,"M");
-				}
-				else if ( text[i] == "n" ){
-					text = text.replaceAt(i,"N");
-				}
-				else if ( text[i] == "g" ){
-					text = text.replaceAt(i,"G");
-				}
-				else if ( text[i] == "þ" ){
-					text = text.replaceAt(i,"Þ");
-				}
-				else if ( text[i] == "l" || text[i] == "r"){
-					text = text.replaceAt(i,"R");
-				}
-				else {}
+	if ( text[i] == "k" ){text = text.replaceAt(i,"K");}
+	else if ( text[i] == "m" ){text = text.replaceAt(i,"M");}
+	else if ( text[i] == "n" ){text = text.replaceAt(i,"N");}
+	else if ( text[i] == "g" ){text = text.replaceAt(i,"G");}
+	else if ( text[i] == "þ" ){text = text.replaceAt(i,"Þ");}
+	else if ( text[i] == "l" || text[i] == "r"){text = text.replaceAt(i,"R");}
+	else {}
 				
-				if ( text[i-1] == "a" ){
-					text = text.replaceAt(i-1,"à");
-				}
-				else if ( text[i-1] == "A" ){
-					text = text.replaceAt(i-1,"À");
-				}
-				else if ( text[i-1] == "o" ){
-					text = text.replaceAt(i-1,"ò");
-				}
-				else if ( text[i-1] == "O" ){
-					text = text.replaceAt(i-1,"Ò");
-				}
-				else if ( text[i-1] == "u" ){
-					text = text.replaceAt(i-1,"ù");
-				}
-				else if ( text[i-1] == "U" ){
-					text = text.replaceAt(i-1,"Ù");
-				}
-				else if ( text[i-1] == "e" ){
-					text = text.replaceAt(i-1,"è");
-				}
-				else if ( text[i-1] == "E" ){
-					text = text.replaceAt(i-1,"È");
-				}
-				else if ( text[i-1] == "i" ){
-					text = text.replaceAt(i-1,"ì");
-				}
-				else if ( text[i-1] == "I" ){
-					text = text.replaceAt(i-1,"Ì");
-				}
-				else if ( text[i-1] == "w" ){
-					text = text.replaceAt(i-1,"ẁ");
-				}
-				else if ( text[i-1] == "W" ){
-					text = text.replaceAt(i-1,"Ẁ");
-				}
-				else if ( text[i-1] == "ő" ){
-					text = text.replaceAt(i-1,"ŏ");
-				}
-				else if ( text[i-1] == "Ő" ){
-					text = text.replaceAt(i-1,"Ŏ");
-				}
-				else if ( text[i-1] == "y" ){
-					text = text.replaceAt(i-1,"ỳ");
-				}
-				else if ( text[i-1] == "Y" ){
-					text = text.replaceAt(i-1,"Ỳ");
-				}
-				else if ( text[i-1] == "ě" ){
-					text = text.replaceAt(i-1,"Ĕ");
-				}
-				else if ( text[i-1] == "ä" ){
-					text = text.replaceAt(i-1,"ạ");
-				}
-				else if ( text[i-1] == "Ä" ){
-					text = text.replaceAt(i-1,"Ạ");
-				}
-				else if ( text[i-1] == "ö" ){
-					text = text.replaceAt(i-1,"ọ");
-				}
-				else if ( text[i-1] == "Ö" ){
-					text = text.replaceAt(i-1,"Ọ");
-				}
-				else if ( text[i-1] == "ë" ){
-					text = text.replaceAt(i-1,"ẹ");
-				}
-				else if ( text[i-1] == "Ë" ){
-					text = text.replaceAt(i-1,"Ẹ");
-				}
-				else if ( text[i-1] == "ï" ){
-					text = text.replaceAt(i-1,"ị");
-				}
-				else if ( text[i-1] == "Ï" ){
-					text = text.replaceAt(i-1,"Ị");
-				}
-				else if ( text[i-1] == "ẅ" ){
-					text = text.replaceAt(i-1,"ẉ");
-				}
-				else if ( text[i-1] == "Ẅ" ){
-					text = text.replaceAt(i-1,"Ẉ");
-				}
-				else if ( text[i-1] == "ø" ){
-					text = text.replaceAt(i-1,"æ");
-				}
-				else if ( text[i-1] == "Ø" ){
-					text = text.replaceAt(i-1,"Æ");
-				}
-				else if ( text[i-1] == "ÿ" ){
-					text = text.replaceAt(i-1,"ỵ");
-				}
-				else if ( text[i-1] == "Ÿ" ){
-					text = text.replaceAt(i-1,"Ỵ");
-				}
-				else if ( text[i-1] == "ã" ){
-					text = text.replaceAt(i-1,"ả");
-				}
-				else if ( text[i-1] == "Ã" ){
-					text = text.replaceAt(i-1,"À");
-				}
-				else if ( text[i-1] == "õ" ){
-					text = text.replaceAt(i-1,"ỏ");
-				}
-				else if ( text[i-1] == "Õ" ){
-					text = text.replaceAt(i-1,"Ỏ");
-				}
-				else if ( text[i-1] == "ũ" ){
-					text = text.replaceAt(i-1,"ủ");
-				}
-				else if ( text[i-1] == "Ũ" ){
-					text = text.replaceAt(i-1,"Ủ");
-				}
-				else if ( text[i-1] == "ẽ" ){
-					text = text.replaceAt(i-1,"ẻ");
-				}
-				else if ( text[i-1] == "Ẽ" ){
-					text = text.replaceAt(i-1,"Ẻ");
-				}
-				else if ( text[i-1] == "ĩ" ){
-					text = text.replaceAt(i-1,"ỉ");
-				}
-				else if ( text[i-1] == "Ĩ" ){
-					text = text.replaceAt(i-1,"Ỉ");
-				}
-				else if ( text[i-1] == "z" ){
-					text = text.replaceAt(i-1,"ż");
-				}
-				else if ( text[i-1] == "Z" ){
-					text = text.replaceAt(i-1,"Ż");
-				}
-				else if ( text[i-1] == "c" ){
-					text = text.replaceAt(i-1,"d");
-				}
-				else if ( text[i-1] == "C" ){
-					text = text.replaceAt(i-1,"D");
-				}
-				else if ( text[i-1] == "ỹ" ){
-					text = text.replaceAt(i-1,"ỷ");
-				}
-				else if ( text[i-1] == "Ỹ" ){
-					text = text.replaceAt(i-1,"Ỷ");
-				}
-				else{}
-				
+	if ( text[i-1] == "a" ){text = text.replaceAt(i-1,"à");}
+	else if ( text[i-1] == "A" ){text = text.replaceAt(i-1,"À");}
+	else if ( text[i-1] == "o" ){text = text.replaceAt(i-1,"ò");}
+	else if ( text[i-1] == "O" ){text = text.replaceAt(i-1,"Ò");}
+	else if ( text[i-1] == "u" ){text = text.replaceAt(i-1,"ù");}
+	else if ( text[i-1] == "U" ){text = text.replaceAt(i-1,"Ù");}
+	else if ( text[i-1] == "e" ){text = text.replaceAt(i-1,"è");}
+	else if ( text[i-1] == "E" ){text = text.replaceAt(i-1,"È");}
+	else if ( text[i-1] == "i" ){text = text.replaceAt(i-1,"ì");}
+	else if ( text[i-1] == "I" ){text = text.replaceAt(i-1,"Ì");}
+	else if ( text[i-1] == "w" ){text = text.replaceAt(i-1,"ẁ");}
+	else if ( text[i-1] == "W" ){text = text.replaceAt(i-1,"Ẁ");}
+	else if ( text[i-1] == "ő" ){text = text.replaceAt(i-1,"ŏ");}
+	else if ( text[i-1] == "Ő" ){text = text.replaceAt(i-1,"Ŏ");}
+	else if ( text[i-1] == "y" ){text = text.replaceAt(i-1,"ỳ");}
+	else if ( text[i-1] == "Y" ){text = text.replaceAt(i-1,"Ỳ");}
+	else if ( text[i-1] == "ě" ){text = text.replaceAt(i-1,"Ĕ");}
+	else if ( text[i-1] == "ä" ){text = text.replaceAt(i-1,"ạ");}
+	else if ( text[i-1] == "Ä" ){text = text.replaceAt(i-1,"Ạ");}
+	else if ( text[i-1] == "ö" ){text = text.replaceAt(i-1,"ọ");}
+	else if ( text[i-1] == "Ö" ){text = text.replaceAt(i-1,"Ọ");}
+	else if ( text[i-1] == "ë" ){text = text.replaceAt(i-1,"ẹ");}
+	else if ( text[i-1] == "Ë" ){text = text.replaceAt(i-1,"Ẹ");}
+	else if ( text[i-1] == "ï" ){text = text.replaceAt(i-1,"ị");}
+	else if ( text[i-1] == "Ï" ){text = text.replaceAt(i-1,"Ị");}
+	else if ( text[i-1] == "ẅ" ){text = text.replaceAt(i-1,"ẉ");}
+	else if ( text[i-1] == "Ẅ" ){text = text.replaceAt(i-1,"Ẉ");}
+	else if ( text[i-1] == "ø" ){text = text.replaceAt(i-1,"æ");}
+	else if ( text[i-1] == "Ø" ){text = text.replaceAt(i-1,"Æ");}
+	else if ( text[i-1] == "ÿ" ){text = text.replaceAt(i-1,"ỵ");}
+	else if ( text[i-1] == "Ÿ" ){text = text.replaceAt(i-1,"Ỵ");}
+	else if ( text[i-1] == "ã" ){text = text.replaceAt(i-1,"ả");}
+	else if ( text[i-1] == "Ã" ){text = text.replaceAt(i-1,"À");}
+	else if ( text[i-1] == "õ" ){text = text.replaceAt(i-1,"ỏ");}
+	else if ( text[i-1] == "Õ" ){text = text.replaceAt(i-1,"Ỏ");}
+	else if ( text[i-1] == "ũ" ){text = text.replaceAt(i-1,"ủ");}
+	else if ( text[i-1] == "Ũ" ){text = text.replaceAt(i-1,"Ủ");}
+	else if ( text[i-1] == "ẽ" ){text = text.replaceAt(i-1,"ẻ");}
+	else if ( text[i-1] == "Ẽ" ){text = text.replaceAt(i-1,"Ẻ");}
+	else if ( text[i-1] == "ĩ" ){text = text.replaceAt(i-1,"ỉ");}
+	else if ( text[i-1] == "Ĩ" ){text = text.replaceAt(i-1,"Ỉ");}
+	else if ( text[i-1] == "z" ){text = text.replaceAt(i-1,"ż");}
+	else if ( text[i-1] == "Z" ){text = text.replaceAt(i-1,"Ż");}
+	else if ( text[i-1] == "c" ){text = text.replaceAt(i-1,"d");}
+	else if ( text[i-1] == "C" ){text = text.replaceAt(i-1,"D");}
+	else if ( text[i-1] == "ỹ" ){text = text.replaceAt(i-1,"ỷ");}
+	else if ( text[i-1] == "Ỹ" ){text = text.replaceAt(i-1,"Ỷ");}
+	else{}			
 	return text;
 	}
 
