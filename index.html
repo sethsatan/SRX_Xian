@@ -159,12 +159,34 @@
 				if(i==lw-1&&word_xian[i]=="."){
 					continue;
 				}
-				if(i>1){	
-					alert(word_xian+ " " + i + " " +yn);
-					
-					if(yn[i-1]=="n"&&yn[i-2]=="n"){
-						var n = i-count
-						end_xian = end_xian.replaceAt(n,end_xian[n]+word_xian[i]+" "+end_xian.substr(n+1));
+				
+				if(i>2){	
+					//alert(word_xian+ " " + i + " " +yn);
+					var sub = word_xian.substring(i-3, i);
+					//alert(sub.match(/[.’”]/g));
+
+					if(sub.match(/[.’”]/g) == null){
+						if ( word_xian[i] == "." ){
+							if(yn[i-1]=="n"&&yn[i-2]=="n"){
+								var n = i-count
+								end_xian = end_xian.replaceAt(n,end_xian[n]+"#"+end_xian.substr(n+1));
+							}
+						}
+						else if ( word_xian[i] == "’" ){
+							if(yn[i-1]=="n"&&yn[i-2]=="n"){
+								var n = i-count
+								end_xian = end_xian.replaceAt(n,end_xian[n]+"’ "+end_xian.substr(n+1));
+							}
+						}
+						else if ( word_xian[i] == "”" ){
+							if(yn[i-1]=="n"&&yn[i-2]=="n"){
+								var n = i-count
+								end_xian = end_xian.replaceAt(n,end_xian[n]+"» "+end_xian.substr(n+1));
+							}
+						}
+						else{
+							alert("erreur");
+						}
 					}
 				}
 			}
